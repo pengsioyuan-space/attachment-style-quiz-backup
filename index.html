@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="通过 30 道题了解你在关系中的安全感、边界与沟通模式。" />
+    <meta name="theme-color" content="#f7f8fd" />
+    <title>依恋型风格测试</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section id="screen-home" class="screen is-active">
+        <div class="card hero-card">
+          <p class="badge">30 题</p>
+          <h1 class="hero-title">依恋型风格测试</h1>
+          <p class="hero-subtitle">通过 30 道题了解你在关系中的安全感、边界与沟通模式，结果含主类型、次高维度和详细解析。</p>
+          <button id="start-btn" class="btn btn-primary btn-large" type="button">开始测试</button>
+        </div>
+      </section>
+
+      <section id="screen-quiz" class="screen" hidden>
+        <div class="card quiz-head">
+          <div class="progress-top">
+            <span id="progress-text">第 1 / 30 题</span>
+            <span id="answer-count">已完成 0/30</span>
+          </div>
+          <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="30" aria-valuenow="0">
+            <div id="progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+
+        <div id="question-card" class="card question-card">
+          <h2 id="question-title" class="question-title"></h2>
+          <div id="option-list" class="option-list" role="radiogroup"></div>
+        </div>
+
+        <div class="quiz-actions">
+          <button id="prev-btn" class="btn btn-secondary" type="button">上一题</button>
+        </div>
+      </section>
+
+      <section id="screen-result" class="screen" hidden>
+        <div class="card result-hero">
+          <p class="badge result-kicker">你的主类型</p>
+          <h2 id="result-type" class="result-type"></h2>
+          <p id="result-subtitle" class="result-subtitle"></p>
+          <p id="result-description" class="result-description"></p>
+          <p id="result-secondary" class="result-secondary"></p>
+        </div>
+
+        <div class="card">
+          <h3 class="section-title">四维分布</h3>
+          <div id="distribution-list" class="distribution-list"></div>
+        </div>
+
+        <div class="card combo-card">
+          <h3 class="section-title">你是这样一个人</h3>
+          <p id="combo-comment" class="combo-comment"></p>
+          <p id="combo-relationship" class="combo-comment"></p>
+          <p id="combo-advice" class="combo-comment combo-advice"></p>
+        </div>
+
+        <div class="card">
+          <h3 class="section-title">人格详细解析</h3>
+          <div id="detail-list" class="detail-list"></div>
+        </div>
+
+        <div class="card author-card">
+          <h3 class="section-title">我想对你说</h3>
+          <p id="author-message" class="author-message"></p>
+        </div>
+
+        <div class="result-actions">
+          <button id="retry-btn" class="btn btn-primary" type="button">重新测试</button>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
+
